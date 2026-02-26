@@ -18,7 +18,7 @@ def test_login(driver, username, password, expected_result):
 
     if expected_result == "success":
         logger.info("Verifying successful login")
-        assert "wrong_page.html" in driver.current_urlc
+        assert "inventory.html" in driver.current_url
     else:
         logger.info("Verifying failed login")
         assert "Username and password do not match" in login_page.get_error_message()
